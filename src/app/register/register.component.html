@@ -1,0 +1,76 @@
+<div class="imageRegister">
+    <h2 style="text-align: center;">{{welcome}}</h2>
+    <div class="container-fluid" class="cent" >
+        
+        
+        <form #userForm="ngForm"  (ngSubmit)="onRegister()" novalidate >
+                
+            <div  class="container" >
+                <div class="form-group" class="leftbox">
+                    <label>First Name</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #fName="ngModel" [class.is-invalid]="fName.invalid && fName.touched" class="form-control " [(ngModel)]="userModel.firstName" name="FirstName" placeholder="Enter First Name">
+                    <small class="text-danger"  [class.d-none]="fName.valid || fName.untouched">First Name is required</small>
+                </div>
+                
+                <div class="form-group" class="rightbox">
+                    <label>Last Name</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #lName="ngModel" [class.is-invalid]="lName.invalid && lName.touched" class="form-control " [(ngModel)]="userModel.lastName" name="LastName" placeholder="Enter Last Name">
+                    <small class="text-danger" [class.d-none]="lName.valid || lName.untouched">Last Name is required</small>
+                </div>
+                <div class="form-group" class="leftbox">
+                    <label>UID</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #uid="ngModel" [class.is-invalid]="uid.invalid && uid.touched" class="form-control " [(ngModel)]="userModel.uid" name="UID" placeholder="Enter UID">
+                    <small class="text-danger" [class.d-none]="uid.valid || uid.untouched">UID is required</small>
+                </div>
+                <div class="form-group" class="rightbox">
+                    <label>Age</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="number" required #age="ngModel" [class.is-invalid]="age.invalid && age.touched" class="form-control " [(ngModel)]="userModel.age" name="Age" placeholder="Enter Age">
+                    <small class="text-danger" [class.d-none]="age.valid || age.untouched">Age is required</small>
+                </div>
+                <div class="form-group" class="leftbox">
+                    <label>Email</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control " [(ngModel)]="userModel.email" name="Email" placeholder="Enter Email">
+                    <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>
+                </div>
+                <div class="form-group" class="rightbox">
+                    <label>Address</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #address="ngModel" [class.is-invalid]="address.invalid && address.touched" class="form-control " [(ngModel)]="userModel.address" name="Address" placeholder="Enter Address">
+                    <small class="text-danger" [class.d-none]="address.valid || address.untouched">Address is required</small>
+                </div>
+                <div class="form-group" class="leftbox">
+                    <label>City</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #city="ngModel" [class.is-invalid]="city.invalid && city.touched" class="form-control " [(ngModel)]="userModel.city" name="City" placeholder="Enter City">
+                    <small class="text-danger" [class.d-none]="city.valid || city.untouched">City is required</small>
+                </div>
+                <div class="form-group" class="rightbox">
+                    <label>State</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #state="ngModel" [class.is-invalid]="state.invalid && state.touched" class="form-control " [(ngModel)]="userModel.state" name="State" placeholder="Enter State">
+                    <small class="text-danger" [class.d-none]="state.valid || state.untouched">State is required</small>
+                </div>
+                <div class="form-group" class="leftbox">
+                    <label>Zipcode</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #zipcode="ngModel" pattern="^[0-9]{6,6}$" maxlength="6" [class.is-invalid]="zipcode.invalid && zipcode.touched" class="form-control " [(ngModel)]="userModel.zipcode" name="Zipcode" placeholder="Enter Zipcode">
+                    <small class="text-danger" [class.d-none]="zipcode.valid || zipcode.untouched">Zipcode is required (digits only)</small>
+                </div>
+                <div class="form-group" class="rightbox">
+                    <label>Password</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #password="ngModel"  [class.is-invalid]="password.invalid && password.touched" class="form-control " [(ngModel)]="userModel.password" name="Password" placeholder="Enter Password">
+                    <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+                </div>
+            </div>
+            
+            <div class="btncent">
+                <button type="submit" [disabled]="userForm.form.invalid" class="btn btn-success" >Register</button>
+            </div>
+            
+        </form>
+        <div class="resultcent">
+            <h6 [style.color]="resultCol">{{result}}</h6>
+            <h6 style="color:red;">{{resultErr}}</h6>
+        </div>
+        
+    </div>
+
+
+</div>
+    

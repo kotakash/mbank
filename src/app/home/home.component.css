@@ -1,0 +1,13 @@
+.imageHome {
+    background-image: url('../images/banknotes.jpg');
+    width:auto;
+    background-position: center;
+    height: 15em;
+
+}
+.container {
+    background-color:lightgrey;
+    
+    width: auto;
+    padding: 25px;
+}

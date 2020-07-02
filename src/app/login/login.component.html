@@ -1,0 +1,33 @@
+<div class="imageLogin">
+    
+    <h2 style="text-align: center;">{{welcome}}</h2>
+    <div class="container-fluid" class="cent">
+        
+        
+        <form #userForm="ngForm"  (ngSubmit)="onLogin()" novalidate >
+            <div class="container">
+                <div class="form-group">
+                    <label>Customer Id</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #custid="ngModel" [class.is-invalid]="custid.invalid && custid.touched" class="form-control " [(ngModel)]="userLoginModel.custId" name="CustomerId" placeholder="Enter Customer Id">
+                    <small class="text-danger"  [class.d-none]="custid.valid || custid.untouched">Customer Id  is required</small>
+                </div>
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input style="background-color: rgba(255,255,255,0.5);" type="text" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control " [(ngModel)]="userLoginModel.password" name="Password" placeholder="Enter Password">
+                    <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+                </div>
+                
+            </div>
+            <div class="btncent">
+                <button type="submit" [disabled]="userForm.form.invalid" class="btn btn-success" >Login</button>
+            </div>
+            
+        </form>
+        <h6 [style.color]="resultCol">{{result}}</h6>
+        <h6 style="color:red;">{{resultErr}}</h6>
+    </div>
+
+
+</div>
+    

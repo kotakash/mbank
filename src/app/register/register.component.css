@@ -1,0 +1,49 @@
+.imageRegister {
+    background-image: url('../images/coins-and-a-piggy-bank.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-size: 100%; */
+    width: auto;
+    height: 40em;
+}
+
+
+button {
+    margin: auto;
+}
+label {
+    font-weight: 700;
+}
+.cent {
+    width: auto;
+    margin: 10px 100px 0px;
+    
+}
+.btncent {
+    margin: 10px 530px 0px;
+}
+.resultcent {
+    margin: 0px 500px 0px;
+}
+.container {
+    border-style: ridge;
+    
+    border-color: white;
+    padding: 20px;
+    width: auto;
+    height: 480px;
+}
+.leftbox {
+    float: left;
+    width: 45%;
+    height: 90px;
+    
+}
+.rightbox {
+    float: right;
+    width: 45%;
+    height: 90px;
+    
+}
+

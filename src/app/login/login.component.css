@@ -1,0 +1,31 @@
+.imageLogin {
+    background-image: url('../images/shopping-business-money-pay.jpg');
+    
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    height: 40em;
+    width: auto;
+}
+
+button {
+    margin: auto;
+}
+label {
+    font-weight: 700;
+}
+.cent {
+    width: auto;
+    margin: 50px 500px 0px 500px;
+    
+}
+.btncent {
+    margin: 10px 135px 0px;
+}
+.container {
+    border-style: ridge;
+    
+    border-color: white;
+    padding: 25px;
+}
